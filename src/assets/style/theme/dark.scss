@@ -1,0 +1,17 @@
+$dark-base: (
+  primary: red,
+  fontSize-1: 22px
+);
+$dark: (
+  sideLeft-background: #323033,
+  sideLeft-width: 200px,
+  sideLeft-collapse-width: 20px,
+  navHeader-height: 60px,
+  navHeader-background: #343333,
+  navHeader-brand-fontSize:
+    map-get(
+      $map: $dark-base,
+      $key: 'fontSize-1'
+    ),
+  navHeader-color: #fff
+);

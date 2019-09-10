@@ -1,0 +1,11 @@
+/**
+ * @description: 展开收缩动画
+ */
+@mixin collapse-left-to-right($translateX: -100%) {
+  transition: transform 0.5s;
+  transform: translateX($translateX);
+}
+@mixin collapse-left-to-right-show {
+  transition: transform 0.5s;
+  transform: translate(0);
+}

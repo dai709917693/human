@@ -4,10 +4,10 @@
  * @Author: dai_zheng
  * @Date: 2019-09-03 08:54:08
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-04 08:51:18
+ * @LastEditTime: 2019-09-06 09:00:26
  -->
 <template>
-  <div id="app">
+  <div id="app" class="dark">
     <router-view />
   </div>
 </template>

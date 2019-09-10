@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-08-30 08:07:51
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-04 09:13:23
+ * @LastEditTime: 2019-09-09 08:52:13
  */
 import {
   VuexModule,
@@ -21,7 +21,7 @@ export interface layoutState {
 class layout extends VuexModule implements layoutState {
   public leftSideCollapse = false
   @Mutation
-  public setDom(collapse: boolean) {
+  public setLeftSideCollapse(collapse: boolean) {
     this.leftSideCollapse = collapse
   }
 }
