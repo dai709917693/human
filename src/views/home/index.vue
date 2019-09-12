@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-04 08:47:54
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-09 10:13:36
+ * @LastEditTime: 2019-09-12 09:25:13
  -->
 <template>
   <el-container>
@@ -21,6 +21,10 @@
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
+      <el-aside class="side__right"
+                :class="sideRightVisible ? 'side__right-show' : 'side__right-hide'">
+        <settings :sideRightVisible.sync="sideRightVisible"></settings>
+      </el-aside>
     </el-container>
   </el-container>
 </template>
@@ -30,24 +34,39 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import sideLeft from './side-left.vue'
 import navHeader from './nav-header.vue'
 import mainContent from './main-content.vue'
-
+import settings from './settings/index.vue'
 
 @Component({
   components: {
     sideLeft,
     navHeader,
-    mainContent
+    mainContent,
+    settings
   }
 })
 export default class home extends Vue {
-
+  sideRightVisible: boolean = false
+  visibilitySideRightSet () {
+    this.sideRightVisible = !this.sideRightVisible
+  }
 }
 </script>
 <style scoped lang="scss">
 @each $theme-className, $theme in $themes {
   .#{$theme-className} {
-    $sideLeft-width: map-get($theme, $key: 'sideLeft-width');
-    $sideLeft-collapse-width: map-get($theme, $key: 'sideLeft-collapse-width');
+    $sideLeft-width: map-get(
+      $map: $theme,
+      $key: 'sideLeft-width'
+    );
+    $sideLeft-collapse-width: map-get(
+      $map: $theme,
+      $key: 'sideLeft-collapse-width'
+    );
+    $sideRight-width: map-get(
+      $map: $theme,
+      $key: 'sideRight-width'
+    );
+
     .home__container {
       position: absolute;
       margin-top: 60px;
@@ -72,8 +91,23 @@ export default class home extends Vue {
         $sideLeft-collapse-width - $sideLeft-width
       );
       &:hover {
-        @include collapse-left-to-right-show;
+        @include collapse-back-to-original;
       }
+    }
+    .side__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: $sideRight-width !important;
+      background-color: map-get($map: $theme, $key: 'sideRight-background');
+      overflow: initial;
+    }
+    .side__right-hide {
+      @include collapse-right-to-left;
+    }
+    .side__right-show {
+      @include collapse-back-to-original;
     }
   }
 }
