@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-11 08:52:42
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-12 09:30:16
+ * @LastEditTime: 2019-09-16 09:11:39
  -->
 <template>
   <div>
@@ -18,7 +18,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
-export default class settings extends Vue {
+export default class Settings extends Vue {
   @Prop(Boolean) sideRightVisible!: boolean
   handleVisibility () {
     this.$emit('update:sideRightVisible', !this.sideRightVisible)

@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-04 09:00:42
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-09 10:14:51
+ * @LastEditTime: 2019-09-16 09:11:58
  -->
 <template>
   <div>
@@ -19,7 +19,7 @@
 import { layoutModule } from '@/store/modules/layout'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
-export default class sideLeft extends Vue {
+export default class SideLeft extends Vue {
 
 }
 </script>

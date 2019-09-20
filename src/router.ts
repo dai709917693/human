@@ -4,26 +4,36 @@
  * @Author: dai_zheng
  * @Date: 2019-09-03 08:54:08
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-04 08:43:00
+ * @LastEditTime: 2019-09-19 08:41:03
  */
 import Vue from 'vue'
 import Router from 'vue-router'
-interface view {
-  path: string
-  name: string
-  component: any
-}
 
 Vue.use(Router)
-const files = require.context('@/views', true, /\.vue$/)
-const routes: view[] = files.keys().map(key => {
-  let path: string = key.replace(/(\.\/|\.vue)/g, '')
-  return {
-    path: `/${path}`,
-    name: path.replace('/', '-'),
-    component: files(key).default
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: require('@/views/home/index').default,
+    children: [
+      {
+        path: '/human-info',
+        name: 'human-info',
+        component: require('@/views/home/human-info/index').default
+      },
+      {
+        path: '/project-document',
+        name: 'project-document',
+        component: require('@/views/home/project-document/index').default
+      },
+      {
+        path: '/editor',
+        name: 'editor',
+        component: require('@/views/home/editor/index').default
+      }
+    ]
   }
-})
+]
 
 export default new Router({
   mode: 'history',

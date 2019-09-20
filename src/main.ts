@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-03 08:54:08
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-05 09:06:34
+ * @LastEditTime: 2019-09-18 09:12:15
  */
 import Vue from 'vue'
 import App from './App.vue'
@@ -14,6 +14,10 @@ import 'normalize.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/style/index.scss'
+/**
+ * @description: marked 代码段高亮
+ */
+import 'highlight.js/styles/github.css'
 Vue.use(ElementUI, { size: 'mini'})
 Vue.config.productionTip = false
 

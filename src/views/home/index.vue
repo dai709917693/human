@@ -44,7 +44,7 @@ import settings from './settings/index.vue'
     settings
   }
 })
-export default class home extends Vue {
+export default class Home extends Vue {
   sideRightVisible: boolean = false
   visibilitySideRightSet () {
     this.sideRightVisible = !this.sideRightVisible
