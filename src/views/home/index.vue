@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-04 08:47:54
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-12 09:25:13
+ * @LastEditTime: 2019-09-27 15:26:03
  -->
 <template>
   <el-container>
@@ -75,6 +75,7 @@ export default class Home extends Vue {
       bottom: 0;
       padding-left: $sideLeft-collapse-width;
       width: 100%;
+      overflow: hidden;
     }
     .nav__header {
       height: map-get($map: $theme, $key: 'navHeader-height') !important;
