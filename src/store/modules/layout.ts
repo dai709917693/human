@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-08-30 08:07:51
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-09 08:52:13
+ * @LastEditTime: 2019-10-08 09:20:21
  */
 import {
   VuexModule,
@@ -17,7 +17,7 @@ import store from '@/store'
 export interface layoutState {
   leftSideCollapse: boolean
 }
-@Module({ namespaced: true, dynamic: true, store, name: 'common' })
+@Module({ namespaced: true, dynamic: true, store, name: 'layout' })
 class layout extends VuexModule implements layoutState {
   public leftSideCollapse = false
   @Mutation

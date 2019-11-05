@@ -4,7 +4,7 @@
  * @Author: dai_zheng
  * @Date: 2019-09-03 08:54:08
  * @LastEditors: dai_zheng
- * @LastEditTime: 2019-09-19 08:41:03
+ * @LastEditTime: 2019-10-29 09:01:56
  */
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -32,6 +32,11 @@ const routes = [
         component: require('@/views/home/editor/index').default
       }
     ]
+  },
+  {
+    path: '/canvas',
+    name: 'canvas',
+    component: require('@/views/editor-canvas/index').default
   }
 ]
 

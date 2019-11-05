@@ -16,10 +16,12 @@ $dark: (
   navHeader-color: #fff,
   sideRight-width: 200px,
   sideRight-background: #323033,
-  editor__menuLeft-width: 50px,
-  editor__menuLeft-background: #ffffff,
-  editor__menuLeft__menuItem-background: #ebeef5,
-  editor__menuLeft__menuItem-color: #909399,
-  editor__menuRight-width: 150px,
-  editor__menuRight-background: #ffffff,
+  editor__menuHeader-height: 50px,
+  editor__menuHeader-background: #ebeef5,
+  editor__menuHeader__menuItem-background: #ebeef5,
+  editor__menuHeader__menuItem-color: #909399,
+  editor__menuLeft-width: 300px,
+  editor__menuLeft-background: #dcdfe6,
+  editor__menuRight-width: 300px,
+  editor__menuRight-background: #dcdfe6
 );
